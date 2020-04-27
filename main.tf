@@ -11,6 +11,14 @@ variable "simplevm_subscriptionId" {}
 variable "simplevm_tenantId" {}
 variable "simplevm_vmname" {}
 
+//-----------------------------------------------------------------
+
+provider "azurerm" {
+  subscription_id = "${var.simplevm_subscriptionId}"
+  client_id       = "${var.simplevm_clientId}"
+  client_secret   = "${var.simplevm_clientSecret}"
+  tenant_id       = "${var.simplevm_tenantId}"
+}
 //--------------------------------------------------------------------
 // Modules
 module "simplevm" {
