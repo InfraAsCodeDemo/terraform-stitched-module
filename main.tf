@@ -4,7 +4,7 @@ variable "simplevm_clientId" {}
 variable "simplevm_clientSecret" {}
 variable "simplevm_hradwareType" {}
 variable "simplevm_network" {}
-variable "simplevm_region" {}
+variable "region" {}
 variable "simplevm_rgName" {}
 variable "simplevm_subnet" {}
 variable "simplevm_subscriptionId" {}
@@ -29,7 +29,7 @@ module "simplevm" {
   clientSecret = "${var.simplevm_clientSecret}"
   hradwareType = "${var.simplevm_hradwareType}"
   network = "${var.simplevm_network}"
-  region = "${var.simplevm_region}"
+  region = "${var.region}"
   rgName = "${var.simplevm_rgName}"
   subnet = "${var.simplevm_subnet}"
   subscriptionId = "${var.simplevm_subscriptionId}"
