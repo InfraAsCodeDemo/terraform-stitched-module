@@ -1,25 +1,25 @@
 "Metadata": {
   "SNC::Parameter::Metadata": {
   
-    "computeinfra_rgName": {
+    "simplevm_rgName": {
       "datasource": "ServiceNow::Pools:: ResourceGroupPool.getByLDC"
     },
     
-    "computeinfra_hradwareType": {
+    "simplevm_hradwareType": {
       "datasource": "ServiceNow::Pools:: HardwareTypePool.getHardwareTypeByLocation",
       "datasourceFilter": {
         "Location": "Location"
       }
     },
     
-    "computeinfra_network": {
+    "simplevm_network": {
       "datasource": "ServiceNow::Pools::NetworkPool.getObjectsByLDC"
     },
     
-    "computeinfra_subnet": {
+    "simplevm_subnet": {
       "datasource": "ServiceNow::Pools:: SubnetPool.getObjectsByNetwork",
       "datasourceFilter": {
-        "Network": "computeinfra_network"
+        "Network": "simplevm_network"
       }
     }
     
